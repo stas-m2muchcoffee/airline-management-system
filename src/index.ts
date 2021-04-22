@@ -3,6 +3,8 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 
+import airportRoutes from './airport';
+
 dotenv.config();
 
 const PORT = process.env.PORT || 3000;
@@ -22,6 +24,8 @@ if (MONGO_URI) {
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.use('/airports', airportRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is listening on the port ${PORT}`);
