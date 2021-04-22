@@ -21,6 +21,10 @@ const flightSchema = new Schema({
     type: Types.ObjectId,
     ref: 'Airport',
     required: true,
+  },
+  status: {
+    type: String, // TODO: use enum
+    default: 'active'
   }
 }, {
   versionKey: false,

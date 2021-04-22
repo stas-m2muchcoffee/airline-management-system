@@ -6,4 +6,5 @@ export interface Flight extends Document {
   date: Date;
   from: string;
   to: string;
+  status: string; // TODO: create enum - 'active', 'canceled',
 }
