@@ -8,6 +8,10 @@ const airportSchema = new Schema({
     type: String,
     required: true,
   },
+  maximumNumberOfFlightsPerDay: {
+    type: Number,
+    default: 0,
+  }
 }, {
   versionKey: false,
   timestamps: true,
