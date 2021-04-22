@@ -7,8 +7,13 @@ const flightSchema = new Schema({
   number: {
     type: String,
     required: true,
+    unique: true,
   },
-  date: {
+  departureDate: {
+    type: Date,
+    required: true,
+  },
+  arrivalDate: {
     type: Date,
     required: true,
   },

@@ -1,9 +1,9 @@
 import { Document } from 'mongoose';
 
 export interface Flight extends Document {
-  _id: string;
   number: string;
-  date: Date;
+  arrivalDate: Date;
+  departureDate: Date;
   from: string;
   to: string;
   status: string; // TODO: create enum - 'active', 'canceled',
